@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+  "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+  "http://struts.apache.org/dtds/struts-2.0.dtd">
+  
+<struts>
+<!--  <constant name="struts.enable.DynamicMethodInvocation" value="true" />-->
+<constant name="struts.i18n.encoding" value="UTF-8"></constant>
+  <constant name="struts.objectFactory" value="spring"/>
+  <constant name="struts.multipart.maxSize" value="10240000000"/>
+<!-- 若package加上namespace属性，则jsp页面form 的action属性必需加上项目名称的路径-->
+<package name="com.webTest.Action" extends="struts-default" namespace="/">
+	<action name="userAction" class="userAction" method="getUserList" >
+		<result name="success">/WEB-INF/main.html</result>
+		<result name="left">/WEB-INF/Left.html</result>
+		<result name="loginsuccess">/WEB-INF/loginsuccess.html</result>
+		<result name="login">loginht.html</result>
+	</action>
+	
+	<action name="admAction" class="admAction" method="Login2">
+	</action>
+	
+	<action name="register" class="admAction" method="Register">
+		<result name="register">register.html</result>
+	</action>
+	
+	<action name="getAdmList" class="admAction" method="getAdmList">
+	 	<result name="right">/WEB-INF/right.jsp</result>
+	</action>
+	
+	<action name="deleteAdm" class="admAction" method="deleteAdm">
+	<result name="right">/WEB-INF/right.jsp</result>
+	</action>
+	
+	<action name="ActiveServlet" class="ActiveServlet" 	method="active">
+	</action>
+	<action name="FindPasswordServlet" class="FindPasswordServlet" 	method="FindPassword">
+	</action>
+	<action name="CheckServlet" class="CheckServlet" method="check">
+	</action>
+	<action name="ResetPasswordServlet" class="ResetPasswordServlet" method="newpassword">
+	</action>
+	
+	<action name="filecAction_*" class="filecAction" method="{1}">
+  		<result name="success">/WEB-INF/loginsuccess.html</result>
+    	<result name="end">/WEB-INF/success.html</result>
+    	<param name="savePath">filecAction</param>
+  	</action>      
+  	<!-- 	<action name="filecAction" class="filecAction" method="execute">
+    	<result name="end">/success.jsp</result>
+    	<param name="savePath">/filecAction</param>  
+    	<param name="maximumSize">204800000</param>
+  	</action>   -->	
+</package>
+</struts>

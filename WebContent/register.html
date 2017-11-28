@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>用户注册</title>
+	<link rel="icon" type="image/png" href="img/logoH.png" sizes="96*96">
+	<!-- <link rel="stylesheet" type="text/css" href="css/normalize.css" /> -->
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+	<link rel="stylesheet" href="css/materialize.min.css">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<style type="text/css">
+		#particles {
+			background-color: #333;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			height: auto;
+			overflow-y: hidden;
+		}
+		canvas{
+
+			height: 100vh;
+		}
+
+	html,
+	body {
+	    height: 100%;
+	}
+	html {
+	    /*display: table;*/
+	    margin: auto;
+	}
+	</style>
+		<script src="http://www.jq22.com/jquery/html5.min.js"></script>
+
+</head>
+<body>
+<div id="particles" >
+
+</div>
+<div id="login-page" class="row"  style="width: 300px;height:700px;z-index: 3333333;position: absolute;top: 0;bottom: 0;left: 0;right: 0;margin: auto auto;">
+	<div class="col s12 z-depth-6 card-panel">
+		<form class="login-form" action="register" method="post">
+			<div class="row">
+				<div class="input-field col s12 center">
+					<!--<img src="http://w3lessons.info/logo.png" alt="" class="responsive-img valign profile-image-login">-->
+					<img src="img/logoH2.png" alt="" class="responsive-img valign profile-image-login">
+					<p class="center login-form-text">&nbsp;&nbsp;&nbsp;北京华诚兴业软件开发有限责任公司&nbsp;&nbsp;&nbsp;</p>
+					<div class="htmleaf-links">
+						<a  href="index.jsp" title="返回首页" >
+							<img src="img/index.png" alt="" style="width: 30px;height: 30px;position: relative;left: 50%;margin-left: -15px">
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="row margin">
+				<div class="input-field col s12">
+					<i class=" prefix">
+						<img src="img/users.png" alt="" style="width: 20px;">
+					</i>
+					<input id="username" name="admName" type="text" class="validate">
+					<span class="usernameW" style="display: none;color: red;font-size: 10px;margin-left: 3rem;margin-top: -20px;margin-bottom: 0px;font-weight: 100;font-size:8px;"></span>
+					<label for="username" class="center-align">用户名<span style="font-size: 10px"> (必填)</span></label>
+				</div>
+			</div>
+			<div class="row margin">
+				<div class="input-field col s12">
+					<i class="prefix">
+						<img src="img/password.png" alt="" style="width: 20px;">
+					</i>
+					<input id="password" name="admPassword" type="password" class="validate">
+					<span class="passwordW" style="display: none;color: red;font-size: 10px;margin-left: 3rem;margin-top: -20px;margin-bottom: 0px;font-weight: 100;font-size:8px;"></span>
+					<label for="password">密码<span style="font-size: 10px"> (必填)</span></label>
+				</div>
+			</div>
+			<div class="row margin">
+				<div class="input-field col s12">
+					<i class="prefix">
+						<img src="img/password.png" alt="" style="width: 20px;">
+					</i>
+					<input id="password-again" type="password">
+					<span class="password-againW" style="display: none;color: red;font-size: 10px;margin-left: 3rem;margin-top: -20px;margin-bottom: 0px;font-weight: 100;font-size:8px;"></span>
+					<label for="password-again">再次输入密码<span style="font-size: 10px"> (必填)</span></label>
+				</div>
+			</div>
+
+			<div class="row margin" >
+				<div class="input-field col s12">
+					<i class="prefix">
+						<img src="img/phone.png" alt="" style="width: 22px;">
+					</i>
+					<input id="tel" name="admMoble" type="tel" class="validate" >
+					<span class="telW" style="display: none;color: red;font-size: 10px;margin-left: 3rem;margin-top: -20px;margin-bottom: 0px;font-weight: 100;font-size:8px;"></span>
+					<label for="tel" class="center-align">手机号码<span style="font-size: 10px"> (必填)</span></label>
+				</div>
+			</div>
+			<!--邮箱输入-->
+			<div class="row margin">
+				<div class="input-field col s12" >
+					<i class=" prefix">
+						<img src="img/email.png" alt=""  style="width: 20px;">
+					</i>
+					<input class="validate" id="email" name="admEmail" type="email">
+					<!--<span class="emailW" style="display: none;color: red;font-size: 10px;margin-left: 3rem"></span>-->
+					<label for="email" data-error="邮箱格式错误！" class="center-align emailLabel">电子邮箱<span style="font-size: 10px"> (必填)</span></label>
+				</div>
+			</div>
+			<span class="wrong"  style="color: red;width: 100%; display:inline-block;text-align: center;"></span>
+			<div class="row">
+				<div class="input-field col s12">
+					<input  value="注册"  type="submit" class="btn  waves-light col s12" id="register">
+				</div>
+				<div class="input-field col s12">
+					<p class="margin center medium-small sign-up">已经有了账号? <a href="login.html">登录</a></p>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+	<!--<script type="text/javascript" src="js/jquery.min.js"></script>-->
+	<script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
+  	<!--materialize js-->
+  	<script src="js/materialize.min.js"></script>
+	<script src="js/register.js"></script>
+<script src="js/particles.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

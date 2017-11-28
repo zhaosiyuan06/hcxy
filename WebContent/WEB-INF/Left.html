@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Left.html</title>
+
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="this is my page">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+<style type="text/css">
+<!--
+a{ text-decoration:none} 
+.hli {
+	line-height: 35px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #ddd;
+	padding-left: 20px;
+	color: #0066FF;
+	text-decoration: none;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #FFFFFF;
+}
+
+
+
+.zgleft {
+	width: 200px;
+	position: fixed;
+	_position: absolute;
+	left: 0px;
+	top: 0px;
+	display: block;
+	_TOP: expression(offsetParent.scrollTop +
+		document.documentElement.clientHeight-this.offsetHeight);
+	height: 768px;
+	background-color: #f8f8f8;
+	border-right: 1px #ddd solid;
+}
+
+.zgleft a {
+	color: #369
+}
+
+.zgleft a:hover {
+	color: #FF0000
+	
+}
+-->
+</style>
+</head>
+
+<body>
+	<div class="zgleft">
+		<div class="hli">
+			<a href="userAction!loginsuccess.action" target="show">上传文件</a>
+		</div>
+		<div class="hli">
+			<a href="getAdmList!getAdmList.action" target="show">用户信息</a>
+		</div>
+	</div>
+</body>
+</html>
